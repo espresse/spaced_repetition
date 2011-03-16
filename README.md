@@ -1,6 +1,16 @@
-Spaced Repetition algorithm. 
+Spaced Repetition algorithm for Ruby. 
 
-== Typical use-case:
+## Install
+Add to your Gemfile:
+
+    gem 'spaced_repetition', :git => 'git://github.com/espresse/spaced_repetition.git'
+
+and run 
+
+    bundle install
+
+## Typical use-case:
+
     require 'rubygems'
     require 'spaced_repetition'
 
@@ -21,12 +31,5 @@ You can fetch results:
     #new repetition date
     new_date = sm2.next_repetition_date
 
-By default, SM2, uses 6 possible answers (0-5), where 0 is very bad and 5 is perfect. If you want to use 4 answers (0 /very bad/ - 3 /perfect/) you can choose SM2Mod. It works in the same manner as SM2.
-
-== Install
-Add to your Gemfile
-    gem 'spaced_repetition', :git => 'git://github.com/espresse/spaced_repetition.git'
-and run 
-    bundle install
-
+By default, SM2, uses 6 possible answers (0-5), where 0 is very bad and 5 is perfect. If you want to use 4 answers (0 /very bad/ - 3 /perfect/) you can choose SM2Mod. It works in the same manner as SM2 does.
 
