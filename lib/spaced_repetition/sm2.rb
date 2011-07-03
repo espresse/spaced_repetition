@@ -14,14 +14,14 @@ module SpacedRepetition
 
       #if quality_response is below 3 start repetition from the begining, but without changing easiness_factor
       if @quality_response < 3
-        @prev_interval=0
+
         @calculated_ef = @prev_ef
+	@calculated_interval = 0
       else
         calculate_easiness_factor
+	calculate_interval
       end
-        calculate_interval
-
-        calculate_date
+	calculate_date
     end
 
     def interval
