@@ -13,7 +13,7 @@ module SpacedRepetition
 	@quality_response = 3
       end
 
-      if @practice_date.nil?
+      if @prev_interval == 0
 	@calculated_interval = first_interval
       else
 	@calculated_interval = calculate_interval
@@ -55,6 +55,7 @@ module SpacedRepetition
     def calculate_interval
       normal_interval = (@prev_interval*@prev_ef).to_i
       premium = ((Date.today-@practice_date)/(4-@quality_response)).to_i
+      
       if @quality_response < 1
 	premium = 0
       end
