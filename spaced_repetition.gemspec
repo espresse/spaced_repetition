@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "spaced_repetition"
-  s.version = "1.1.0"
+  s.version = "1.1.1"
   s.platform = Gem::Platform::RUBY
   s.authors = ["Michał Ostrowski"]
   s.email = ["michol@linuxcsb.org"]

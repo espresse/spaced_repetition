@@ -9,6 +9,10 @@ module SpacedRepetition
       @prev_interval = prev_interval
       @practice_date = practice_date
 
+      if @quality_response > 3
+	@quality_response = 3
+      end
+
       if @practice_date.nil?
 	@calculated_interval = first_interval
       else
